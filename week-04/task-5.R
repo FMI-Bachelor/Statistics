@@ -1,0 +1,6 @@
+# P(1<=X<=3) = P(X=1) + P(X=2) + P(X=3)
+dbinom(1, n, p) + dbinom(2, n, p) + dbinom(3, n, p)
+sum( dbinom( c(1:3), n, p ) )
+# P(1<=X<=3) = P(X<=3) - P(X<=0)
+pbinom(3, n, p) - pbinom(0, n, p)
+ppois(3, n*p) - ppois(0, n*p)
